@@ -30,3 +30,26 @@ for d in data:
 		new.append(d)
 print('共有', len(new), '筆資料長度小於100')
 
+#print(new[0])
+#print(new[1])
+
+good = []
+for d in data:     #d是單一筆留言
+	if 'good' in d:    #if (True / False)
+		good.append(d)
+print('共有', len(good), '筆留言提到good')		
+
+
+#list comprehension
+
+good = [d for d in data if 'good' in d]
+#第一個字為運算 在此處為good.append(d)的運算
+#print(good)
+
+bad = [d for d in data]
+#print(bad)
+
+bad = []
+for d in data:
+		bad.append('bad' in d) #Boolean
+print(bad)
