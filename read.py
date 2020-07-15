@@ -22,3 +22,11 @@ for d in data:
 	#len(d)  每一筆留言的字(母)數
 	sum_len = sum_len + len(d) #所有留言的字(母)數
 print('每筆留言的平均字數是', sum_len/len(data))  #所有字(母)數/100萬筆留言 = 平均每筆留言的字(母)數
+
+#篩選清單
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('共有', len(new), '筆資料長度小於100')
+
